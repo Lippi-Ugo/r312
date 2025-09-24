@@ -49,4 +49,5 @@ jobs:
             cd /var/www/r312/server
             npm ci
             npm install send server-destroy
-            PORT=8082 pm2 start -f entry.mjs
+            PORT=8082 pm2 start -f entry.mjs --name r312 --update-env
+            pm2 save
